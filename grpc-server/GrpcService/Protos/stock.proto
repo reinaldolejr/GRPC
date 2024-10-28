@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcStockService";
+
+service StockService {
+    rpc MonitorStocks (stream StockRequest) returns (stream StockPrice);
+}
+
+message StockRequest {
+    string ticker = 1; 
+}
+
+message StockPrice {
+    string ticker = 1;
+    double price = 2;
+    string message = 3;
+}

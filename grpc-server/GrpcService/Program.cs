@@ -17,8 +17,9 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.MapGrpcService<GreeterService>();
+app.MapGrpcService<GreeterServiceImpl>();
 app.MapGrpcService<TimeServiceImpl>();
+app.MapGrpcService<StockServiceImpl>();
 app.MapGet("/", () => "gRPC Service is running!");
 app.UseCors("MyAllowSpecificOrigins");
 
