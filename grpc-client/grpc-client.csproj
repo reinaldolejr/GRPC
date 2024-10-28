@@ -15,7 +15,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <Protobuf Include="..\grpc-server\GrpcService\Protos\greet.proto" GrpcServices="Client" />
+    <Protobuf Include="..\grpc-server\GrpcService\Protos\*.proto" GrpcServices="Client" />
   </ItemGroup>
 
 </Project>
