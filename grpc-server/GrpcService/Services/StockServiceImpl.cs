@@ -63,7 +63,7 @@ namespace GrpcService.Services
 
         private async Task<double> GetStockPriceFromAPI(string ticker)
         {
-            var apiKey = "5952181e556f4168a1f0b734f60a52e9";
+            var apiKey = Environment.GetEnvironmentVariable("apiKeyTwelveData");
             var HttpClient = new HttpClient();
             var client = new TwelveDataClient(apiKey, HttpClient);
 
