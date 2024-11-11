@@ -12,7 +12,7 @@ namespace GrpcClient
         static async Task Main(string[] args)
         {
             using var channel = GrpcChannel.ForAddress("https://localhost:7294");
-            var client = new Greeter.GreeterClient(channel);
+            var client = new GreeterService.GreeterServiceClient(channel);
 
             var reply = await client.SayHelloAsync(new HelloRequest { Name = "Reinaldo" });
             Console.WriteLine("Greeting: " + reply.Message);
