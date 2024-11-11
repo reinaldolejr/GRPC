@@ -61,7 +61,6 @@ This project demonstrates client-server communication using gRPC (Google Remote 
    - Responses stream back to client based on service type
    - Maintains persistent connection for streaming services
 
-## Running the Project
 
 ### Start the Server
 - First, clone and start the gRPC server:
